@@ -1,0 +1,7 @@
+1. ¿Qué relación encontrás entre las variables y el modo en que organizamos información en nuestra vida diaria?
+	Es una manera de organizar los elementos. En este caso de un programa. Es decir, como en la vida cotidiana no podes tener todo tirado en cualquier lado. Si organizas de acuerdo a un orden restablecido vas a tener un acceso mas rápido a lo que necesites. Por ejemplo a la hora de cocinar, si tenés todo desordenado vas a demorar mas en preparar la comida. Conjuntamente esto a la hora de programar es exactamente lo mismo. Si no entendes como llamas a una variable ni porque guarda ese dato no vas a saber en donde podes llegar a tener problemas a la hora de hacer andar un programa. 
+	
+2. ¿Por qué es fundamental elegir nombres descriptivos para las variables y qué impacto tiene esto en la legibilidad del código?
+	Si en algún momento tenés un error, y vas a intentar leer el código, que tus variables no sean descriptivas va a generar que sea mas difícil entender que hacen y porque las creaste. Y por lo tanto mas difícil entender en donde puede estar tu problema. 
+	
+	
