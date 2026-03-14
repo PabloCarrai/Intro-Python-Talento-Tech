@@ -1,0 +1,12 @@
+1. ¿Cómo creés que las herramientas avanzadas como elif y match pueden simplificar
+la lógica de un programa en comparación con los condicionales básicos? Pensá en
+ejemplos concretos donde estas estructuras serían especialmente útiles.
+
+	Los elif son interesantes cuando tenes condiciones fáciles de usar. En cuanto a match entiendo que sirve cuando las opciones son limitadas.  Por ejemplo para el caso de los elif es útil si tengo que manejarme con rangos de valores, determinar una edad entre una franja de valores. En cuanto a match es util si las opciones son pocas y determinante. Por ejemplo un menú de opciones de comandos. 
+
+2. ¿De qué manera los métodos de cadenas como .lower(), .upper() o .title() te
+permiten mejorar la calidad de los datos ingresados por los y las usuarios? ¿Qué
+impacto podría tener esto en programas más complejos o en aplicaciones del mundo
+real?
+	
+	Cuando queres validar una cadena de texto de una cantidad de elementos. Por ejemplo estas esperando una respuesta a una pregunta por si o no. Esas dos cadenas pueden escribirse de diferente manera. La manera en la que la escriba vos podes transformarla para luego chequear que el dato que recibiste es el que corresponda. 
