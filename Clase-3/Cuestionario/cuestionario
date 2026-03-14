@@ -1,0 +1,15 @@
+1. ¿De qué manera los operadores lógicos y relacionales amplían las posibilidades de
+resolver problemas en programación?
+
+	Permiten hacer evaluaciones sobre variables y valores. Estas evaluaciones te dejan determinar una posibilidad. Y en base a eso tomar una decisión. 
+
+2. ¿Por qué creés que es importante escribir código que no sólo funcione, sino que
+también sea fácil de leer y mantener?
+
+	Si el código es ofusco, puede generar errores de comprensión en quien lo lee. Cuando el código es claro es posible detectar errores lógicos, además de agregar funcionalidades al programa que quizás no existen. 
+
+
+3. ¿Cómo pueden las estructuras condicionales trabajar en conjunto con otras
+estructuras como bucles o funciones para resolver problemas más complejos?
+	
+	Las estructuras condicionales permiten tomar decisiones en base a juzgar el resultado de una o varias condiciones. Esto permite por ejemplo hacer que un programa use o no un bucle en el caso de que una condición se cumpla o no. Luego los bucles se encargan de realizar tareas de manera repetitivas, pero van a depender de la evaluación de las condiciones trabajadas en las estructuras condicionales. 
