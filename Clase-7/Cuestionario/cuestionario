@@ -1,0 +1,13 @@
+¿Por qué es importante conocer los métodos más comunes de las listas, como
+append() o remove()? ¿En qué situaciones prácticas podrían ayudarte estos
+métodos en el desarrollo del TFI?
+	Las listas al ser un elemento mutable nos va a permitir almacenar datos que luego obviamente podremos usar en alguna aplicación, por ejemplo en el proyecto de practica. 
+
+2. ¿Cómo pueden los slices simplificar la manipulación de datos en tus programas?
+¿Qué beneficios tienen frente a otras formas de acceder a los elementos de una lista
+o tupla?
+	Te permiten un acceso rápido a una porción de un elemento. Esto es muy util si uno usa una lista o una tupla, ya que a la hora de acceder a esos elementos podemos evitar tener que recorrer completamente el elemento y podemos usar los slices como un método de acceso rápido.
+
+3. ¿En qué escenarios el uso de una tupla puede ser preferible al de una lista? Pensá
+en ejemplos donde la inmutabilidad sea una ventaja.
+	En donde tenes información sensible que no queres modificar. Por ejemplo sabes que hay un listado de datos que usas en varias condiciones, un listado de días. Y necesitas usar ese listado en varias partes de tu programa. Si lo tenes en una lista es posible modificarlo, pero al tenerlo en una tupla esos datos son inmutables. Y podes acceder a leerlo como tupla o usando slices. 
