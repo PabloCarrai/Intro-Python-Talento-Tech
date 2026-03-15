@@ -1,0 +1,17 @@
+1. ¿Qué diferencias encontrás entre el bucle while y el bucle for? Pensá en situaciones
+específicas sean de programación o de la vida cotidiana en las que elegirías uno
+sobre el otro y por qué.
+
+	La diferencia que existe entre while y for, es que en el caso del while el bucle se puede repetir una cantidad de veces indefinidas. Siempre tenemos que tener a mano una forma de evitar que esa condicion sea por siempre verdadera, porque el bucle sera infinito. En cambio en bucle for suele usarse una cantidad de veces determinadas. Es util cuando tengo que recorrer una cantidad de elementos en particular, de los que se cuantos son. Por ejemplo si tengo que buscar una cadena dentro de una lista. Puedo usar for. 
+
+2. Al recorrer listas con un bucle for, ¿qué ventajas encontrás frente a la gestión
+manual de índices en un bucle while? ¿Cómo influye esto en la legibilidad y
+mantenibilidad del código?
+
+	Como primer ventaja, creo que seria esto de no tener que pensar en una variable auxiliar para crear una condición que detenga el bucle en un momento determinado. No necesito un contador para que cuando una condición se cumpla deje de funcionar. 
+
+3. ¿Cómo podés aplicar lo aprendido en esta clase al desarrollo de sistemas más
+complejos, como el Trabajo Final Integrador? Pensá en validaciones, normalización
+de datos y la eficiencia que aportan los bucles.
+
+	Básicamente el bucle while lo puedo usar en cada parte en donde el usuario tenga que ingresar un valor, y el mismo no sea uno valido. Los bucle for los puedo usar cuando tenga que operar sobre una lista de valores, o tenga que guardar dichos valores en una lista por ejemplo. 

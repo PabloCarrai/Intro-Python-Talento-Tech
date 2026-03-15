@@ -1,0 +1,17 @@
+1. ¿Cómo podés asegurarte de que un bucle while no se convierta en un bucle infinito?
+Pensá en la importancia de actualizar correctamente las variables involucradas en la
+condición del bucle.
+
+	Hay que usar un elemento que rompa la condición por la que funciona el bucle. Ya sea un contador, o una variable que luego de ejecutar la sentencia del bucle pueda cambiar de valor. Para que en determinada situación la condición deje de ser verdadera y el bucle no se ejecute mas. 
+
+
+2. Reflexioná sobre las diferencias entre usar las sentencias break y continue. ¿En qué
+situaciones podrían ser más útiles cada una de estas herramientas?
+	
+	Break puede ser útil cuando necesitamos frenar las sentencias que se ejecutan en el bloque de codigo del bucle. Por ejemplo si busco un numero particular en una lista y al encontrarlo ya no necesito seguir buscándolo. En cambio continue hace un salto por una vez del código del bloque dentro del bucle. Esto es único cuando por ejemplo introducen mal un dato. Y no necesitamos que ese dato se registre. 
+
+3. Al recorrer una lista con un bucle while, ¿qué pasos considerás esenciales para
+garantizar que cada elemento sea procesado correctamente y que el bucle finalice
+en el momento adecuado?
+
+	Que la condición que activa el bucle tenga un elemento de corte para dejar de ser un bucle infinito. Necesitamos poder conseguir que la condición de false en algún momento. 
