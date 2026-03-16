@@ -1,0 +1,23 @@
+Trabajo Final Integrador(TFI):
+Ingreso de datos de productos. 
+El sistema tiene que permitir ingresar datos basicos de los productos: nombre, categoria, y precio. Estos datos deben almacenarse en una lista, donde cada producto sea representado como una sublista de tres elementos(nombre, categoria y precio)
+Visualizacion de productos registrado. 
+El programa debe incluir una funcionalidad para mostrar en pantalla todos los productos ingresados. La informacion debe presentarse de manera ordenada y legible, con cada producto numerado. 
+Busqueda de productos.
+El sistema debe permitir buscar productos por su nombre. Si encuentra coincidencias, debe mostrar la informacion completa del producto que coincidan. Sino hay coincidencias, debe informar que no se encontraron resultados. 
+Eliminacion de productos. 
+El sistema debe permitir eliminar un producto de la lista, identificandolo por su posicion(numero) en la lista. 
+Requisitos. 
+Usar listas para almacenar y gestionar datos. 
+Incorporar bucles while y for segun corresponda. 
+Validar entradas del usuario/a asegurandote de que no se ingresen datos vacios o incorrectos. 
+Utilizar condicionales para gestionar las opciones del menu y las validaciones necesarias. 
+Presentar un menu que permita elegir entre las funcionalidades disponibles: agregar productos, visualizar productos,buscar productos y eliminar productos. 
+El programa debe continuar funcionando hasta que se elija una opcion para salir. 
+Ejemplo de menu. 
+
+1. Agregar producto
+2. Mostrar productos
+3. Buscar productos
+4. Eliminar producto
+5. Salir

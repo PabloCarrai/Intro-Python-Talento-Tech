@@ -1,0 +1,18 @@
+1. ¿En qué situaciones es más útil usar un diccionario en lugar de una lista o una
+tupla? Reflexioná sobre cómo los diccionarios facilitan el acceso a los datos cuando
+necesitas buscar elementos específicos a partir de una clave.
+	El diccionario es importante cuando podes usar las claves del mismo para referir un elemento. Acá no se usan los índices, sino por ejemplo en el caso de un producto la clave puede ser el nombre, y con esa referencia se puede acceder a su valor. Esto en lista o tuplas no se puede hacer. 
+
+2. ¿Se te ocurre algún caso de la vida cotidiana donde un diccionario te sería útil para
+organizar información?
+	Al ser una estructura que se maneja con una clave, y esa clave puede ser un valor determinado diferente de un numero hay varias posibilidades. Por ejemplo para un producto se puede tener como clave, el código, el nombre del producto, el detalle, el precio. Y cada una de estas claves son elementos que se pueden usar para devolver los valores almacenados. Esa es la parte practica de los diccionarios. 
+
+3. ¿Cómo te ayuda la estructura de clave-valor de los diccionarios a organizar y
+manejar información de manera más eficiente? Pensá en el tipo de problemas que
+podrías resolver más rápidamente con esta estructura en comparación con otras.
+	Ayuda al no tener que referencia un dato por una posición. Sino que puedo poner una estructura mas visible y manejable que es la de las llaves. Las llaves extienden muchísimo el uso ya que son flexibles en cuanto al nombre que puede tener una llave. 
+
+4. ¿Qué ventajas ofrece el uso de diccionarios para registrar información en tu Trabajo
+Final Integrador (TFI)? Considerá cómo podrías aplicar los diccionarios para
+gestionar datos de clientes, productos u otra información relevante para tu proyecto.
+	Si sumamos el diccionario a los otros elementos se puede hacer una combinación bastante útil. Se podría generar listas con componentes de diccionarios. Y esto a su vez se combina bastante bien con los otros elementos. 
