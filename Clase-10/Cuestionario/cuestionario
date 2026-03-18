@@ -1,0 +1,13 @@
+1. ¿De qué manera las funciones que devuelven valores pueden hacer que tu código
+sea más modular y reutilizable? Pensá en cómo podrías aplicar este concepto en
+proyectos más grandes.
+	Puedo hacer que una función evalué una condición y en base a eso haga o no algo en particular dentro de un bloque if. Eso es muy util. 
+
+2. ¿Cómo te ayuda la posibilidad de devolver múltiples valores con tuplas a resolver
+problemas de programación de forma más eficiente? ¿Podés pensar en un ejemplo
+práctico donde esto sea útil?
+	Puedo devolver listas o tuplas y luego en base a esos valores hacer que otra función haga algo en particular. Lo cual hace que las funciones sean bastantes potentes. 
+
+3. ¿Qué importancia tiene documentar tus funciones con docstrings? Reflexioná sobre
+cómo esto puede facilitar la colaboración en proyectos de equipo.
+	A la hora de usar una función de alguien mas, una buena documentación es muy útil ya que nos da una idea de como consumir dicha función. 
