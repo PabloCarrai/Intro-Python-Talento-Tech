@@ -1,0 +1,20 @@
+1. ¿Por qué es útil dividir el código en funciones en lugar de escribir todo en un solo
+bloque? Reflexioná sobre cómo las funciones ayudan a organizar y simplificar tareas
+complejas en tu programa. ¿Qué ventajas notás al estructurar el código de esta
+manera?
+
+	Las funciones permiten evitar que el codigo se haga enorme. Ya que hay forma de hacer pequeñas instrucciones o bloques de codigo que nos permiten realizar una accion varias veces sin tener que escribir el mismo codigo. Por ejemplo en un menu puedo disponerlo en una funcion y llamarlo cada vez que necesite mostrar el mismo. 
+
+2. ¿Cómo podría mejorar el programa de gestión de productos que desarrollaste?
+Considerá qué funcionalidades adicionales podrías agregar (por ejemplo, modificar
+el precio de un producto o buscar productos específicos). ¿Cómo cambiaría el
+código si implementaras estas mejoras?
+	
+	Se pueden sustituir muchos bucles por partes de funciones para hacer mas legible el código. Esto ahorra en  muchas lineas. Ya que separo las funciones en cuanto a lo que cada parte del código hace. 
+
+3. ¿Cómo podrías aplicar lo aprendido sobre funciones en tu Trabajo Final Integrador
+(TFI)? Pensá en qué partes del TFI podrías simplificar o mejorar usando funciones.
+¿Qué beneficios tendría modularizar tu código para el proyecto final?
+4. ¿Podrías crear una función que permita modificar un producto ya cargado? ¿Cómo
+la diseñarías?
+	Básicamente puedo reestructurar todo el programa. Evitando el uso de bucle en la mayoría de las veces y haciendo mas leíble el código. 
