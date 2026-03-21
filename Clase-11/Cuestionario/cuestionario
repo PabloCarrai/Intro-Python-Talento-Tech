@@ -1,0 +1,20 @@
+1. ¿Cómo creés que el uso de módulos puede ayudarte a mejorar la organización de
+tus proyectos? Pensá en ejemplos concretos donde dividir el código en módulos
+podría simplificar su mantenimiento.
+	Sobre los programas que venimos haciendo que incluyen menues, creo que podría hacer una función que se encargue de gestionar el menú, y en base a eso llamar a una función de acuerdo a lo que necesite hacer. 
+
+2. Los módulos estándar como random y datetime ofrecen muchas funcionalidades
+predefinidas. ¿Qué ventajas encontrás al usar estas herramientas en lugar de
+desarrollar todo desde cero? ¿Podrías pensar en aplicaciones prácticas para estos
+módulos en tus proyectos?
+	Tener que desarrollar desde cero cada modulo existente es un trabajo bastante arduo y difícil. No es una buena idea si ya existe un modulo que se usa desde hace tiempo. Te ahorra muchos dolores de cabeza. Pienso usar estos módulos a medida que le voy agarrando la mano. 
+
+3. La biblioteca colorama permite personalizar la interacción en la consola con colores.
+¿Cómo podría mejorar la experiencia del usuario en programas que diseñes? ¿Qué
+otras aplicaciones creativas podrías imaginar para este módulo?
+	Con colores una cli es mucho mas divertida. Mas allá del mal gusto que uno puede tener, o el desconocimiento por parte del diseño es una ventaja tener un modulo así. 
+
+4. Ahora que entendiste cómo crear tus propios módulos, ¿cómo los usarías para
+estructurar un proyecto más grande? ¿Qué partes del código podrías separar en
+diferentes archivos para facilitar el trabajo en equipo?
+	Separaría todo, cada función traerla importada y en base a eso poder usarla en el codigo. 
