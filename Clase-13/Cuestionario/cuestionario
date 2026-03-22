@@ -1,0 +1,16 @@
+1. Aprendiste a crear tablas y realizar consultas básicas. ¿Qué beneficios encontrás en
+estructurar los datos en tablas con campos definidos en lugar de usar listas o
+diccionarios?
+	Hay una forma de organizar los datos que te permite hacer consultas mas completas. Ordenar los datos de diferentes maneras e incluso obtener solo ciertos datos que son necesarios. Obviamente si hay que hacer esto con archivos es muy dificil. 
+
+2. Pensando en las operaciones SQL que vimos (SELECT, INSERT, UPDATE,
+DELETE), ¿cuál te pareció más intuitiva y por qué?
+	La sentencia Select, es como que te permiten muchas opciones y son intuitivas. 
+
+3. ¿Qué errores podrías prever al trabajar con bases de datos en programas reales y
+cómo creés que podrías evitarlos usando lo aprendido?
+	Se me ocurre validar que el usuario haya ingresado correctamente el tipo de dato que necesita la tabla.
+
+4. ¿Cómo podrías aplicar el uso de bases de datos SQLite en un proyecto más
+complejo, como el Trabajo Final Integrador?
+	Por lo pronto con una base de datos, me ahorro el tener que cargar los datos de prueba en cada vez que abro o cierro el programa. Luego obviamente puedo organizar en tablas la información y eso es bastante practica, porque entre tablas puedo relacionar datos. 
