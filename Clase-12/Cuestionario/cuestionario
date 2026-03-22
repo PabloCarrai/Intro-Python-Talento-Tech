@@ -1,0 +1,12 @@
+1. ¿Por qué es importante la persistencia de datos en las aplicaciones que
+desarrollamos? ¿Cómo creés que afecta esto a la experiencia del usuario final?
+	El poder guardar los datos permite no tener que volver a generarlos en la aplicación una vez que finaliza, ya sea por un error, o por algo que haya que modificar. Esto cuando estamos haciendo pruebas es algo muy a favor, ya que nos evitamos tener que volver a generar esos datos. 
+
+2. ¿Qué ventajas encontrás en el uso de archivos de texto para guardar información?
+¿Cuáles serían las limitaciones de esta técnica frente a otras opciones como las
+bases de datos?
+	El archivo de texto sirve para datos puntuales. La base de dato tiene muchas ventajas en cuanto a la organización de los datos, y permite hacer búsquedas y muchas otras operaciones que si fueran en un archivo serian muy engorrosas. 
+
+3. ¿Cómo te sentiste utilizando try-except para manejar errores? ¿Podés identificar
+situaciones reales en las que su uso sería esencial?
+	Es util poder evitar que ante un error tu aplicación deje de funcionar. Y es bastante cómodo poder hacer algo con esos posibles errores de aplicación. 
