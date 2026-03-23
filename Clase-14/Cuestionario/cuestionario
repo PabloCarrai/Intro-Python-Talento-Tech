@@ -1,0 +1,19 @@
+1. Cuando trabajamos con bases de datos en Python, ¿por qué es importante utilizar
+parámetros en las consultas en lugar de concatenar directamente los valores
+ingresados por el usuario?
+	Para evitar inyección de datos en sql. 
+
+2. En la implementación de transacciones con SQLite, ¿qué problema se podría
+generar si olvidamos hacer un COMMIT después de una serie de modificaciones en
+la base de datos?
+	Provoca la perdida de todas las modificaciones realizadas. 
+
+3. El manejo de excepciones con try-except es clave para evitar errores inesperados.
+¿Qué tipo de situaciones creés que podrían requerir un ROLLBACK dentro de un
+bloque except?
+	Una edicion de un registro. 
+
+4. Si tuvieras que optimizar un sistema CRUD para mejorar su seguridad y rendimiento,
+¿qué técnicas o herramientas considerarías implementar más allá de lo aprendido
+en esta clase?
+	Usaria transacciones con rollback para asegurar que las operaciones sql funcionen correctamente. 
