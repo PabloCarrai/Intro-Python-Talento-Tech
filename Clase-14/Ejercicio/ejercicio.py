@@ -64,39 +64,114 @@ def mostrar_datos_db(datos):
         print("No hay datos")
     else:
         for dato in datos:
-            print(f"Id: {dato[0]}, Nombre: {dato[1]} Precio: {dato[2]}")
+            print(f"Id: {dato[0]}, Nombre: {dato[1]} Precio: ${dato[2]}")
 
 
-def validar_datos(nombre, precio):
-    if (
-        isinstance(nombre, str)
-        and bool(nombre.strip())
-        and isinstance(precio, int)
-        and precio > 0
-    ):
-        return True
-    else:
-        return False
+def validar_datos():
+    while True:
+        try:
+            nombre = input("Nombre?   ").strip().capitalize()
+            precio = int(input("Precio?    "))
+            if not nombre or precio <= 0:
+                continue
+            else:
+                return nombre, precio
+                break
+        except ValueError:
+            print("Error en los datos cargados")
 
 
-def cargar_productos_db(db, nombre, precio):
+def insertar_datos(db, nombre, precio):
+    conexion = sqlite3.connect(db)
+    cursor = conexion.cursor()
     try:
-        if validar_datos(nombre, precio):
-            conexion = sqlite3.connect(db)
-            #   Genero un cursor
-            cursor = conexion.cursor()
-            sentencia = "insert into productos(nombre,precio) values(?,?)"
-            datos = (nombre, precio)
-            conexion.execute(sentencia, datos)
-            conexion.commit()
-            conexion.close()
-            print("Datos insertados")
-        else:
-            print("Error en alguno de los datos")
-    except Exception as e:
-        print(f"Error {e}")
+        datos = (nombre, precio)
+        cursor.execute("insert into productos(nombre,precio) values(?,?)", datos)
+        conexion.commit()
+        print("Registro insertado")
+    except sqlite3.Error as e:
+        conexion.rollback()
+        print(f"Error detectado, haciendo rollback: {e}")
 
-        
+
+def validar_id_existente_db(db, id):
+    #   Abro la conexion
+    conexion = sqlite3.connect(db)
+    #   Genero un cursor
+    cursor = conexion.cursor()
+    #   La sentencia del select
+    sentencia = "select id from productos where id=?"
+    datos = (id,)
+    #   Corro dicha sentencia
+    cursor.execute(sentencia, datos)
+    #   guardo el resultado en filas
+    filas = cursor.fetchone()
+    return filas
+    conexion.close()
+
+
+def editar_valores_db(db, nombre, precio, id):
+    conexion = sqlite3.connect(db)
+    cursor = conexion.cursor()
+    try:
+        cursor.execute("BEGIN TRANSACTION;")
+        sentencia = "update productos set nombre=?, precio=? where id=?"
+        datos = (nombre, precio, id)
+        cursor.execute(sentencia, datos)
+        cursor.execute("COMMIT;")
+        print("Transaccion comiteada como el vecino manda.")
+    except sqlite3.Error as e:
+        print(f"Ocurrio un error: {e}")
+        cursor.execute("ROLLBACK;")
+        print("Se hizo un rollback")
+    finally:
+        conexion.close()
+
+
+def validar_id(db):
+    while True:
+        try:
+            id_existente = int(input("Id?"))
+            if (
+                id_existente <= 0
+                or validar_id_existente_db(ruta_db, id_existente) == None
+            ):
+                continue
+            else:
+                return id_existente
+                break
+        except ValueError:
+            print(f"Error con el id")
+
+
+def eliminar_dato_db(db, id):
+    conexion = sqlite3.connect(db)
+    cursor = conexion.cursor()
+    try:
+        sentencia = "delete from productos where id=?"
+        datos = (id,)
+        cursor.execute(sentencia, datos)
+        conexion.commit()
+        print("Registro eliminado como el vecino manda. ")
+    except sqlite3.Error as e:
+        conexion.rollback()
+        print("Ocurrio un error: {e}")
+    finally:
+        conexion.close()
+
+
+def validar_desicion_usuario(db, id):
+    respuesta = (
+        input(f"{Back.RED}Esta seguro que quiere eliminar el producto?    ").lower().strip()
+    )
+    match respuesta:
+        case "si" | "s":
+            print(f"{Back.RED}Eliminando producto")
+            eliminar_dato_db(db, id)
+        case "no" | "n":
+            print(f"{Back.BLUE}No eliminamos nada")
+        case _:
+            print(f"{Back.GREEN}Respuesta no reconocida....")
 
 
 def mostrar_menu():
@@ -111,17 +186,24 @@ def mostrar_menu():
         match opcion:
             case "1":
                 print(f"{Back.RED}Cargar Producto  ")
-                while True:
-                    nombre = input("Nombre?    ")
-                    precio = input("Precio?    ")
-                    cargar_productos_db(ruta_db, nombre, int(precio))
+                nombre, precio = validar_datos()
+                insertar_datos(ruta_db, nombre, precio)
+                print(f"{nombre}{precio}")
             case "2":
                 print(f"{Back.RED}Mostrar Producto  ")
                 mostrar_datos_db(leer_datos(ruta_db))
             case "3":
                 print(f"{Back.RED}Editar Producto  ")
+                mostrar_datos_db(leer_datos(ruta_db))
+                id = validar_id(ruta_db)
+                nombre, precio = validar_datos()
+                editar_valores_db(ruta_db, nombre, precio, id)
             case "4":
                 print(f"{Back.RED}Eliminar Producto  ")
+                mostrar_datos_db(leer_datos(ruta_db))
+                id = validar_id(ruta_db)
+
+                validar_desicion_usuario(ruta_db, id)
             case "5":
                 print(f"{Back.RED}Salir  ")
                 break
@@ -130,6 +212,7 @@ def mostrar_menu():
 
 
 def main():
+    #   verificar_db_existe(ruta_db)
     #   Arranco el programa por mostrar el menu
     mostrar_menu()
 
