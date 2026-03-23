@@ -1,0 +1,14 @@
+1. ¿Por qué es importante validar los datos antes de insertarlos en la base de datos?
+¿Qué consecuencias podría tener no hacerlo?
+	Para que la base de datos no tenga información sin valor mas que la que realmente debería de tener. 
+
+2. En un proyecto real, ¿qué ventajas te ofrece modularizar tu código con funciones en
+lugar de escribir toda la lógica en un solo bloque de código?
+	Te permite trabajar de una manera mas cómoda. No solo porque podes hacer tus propios módulos, sino que podes separar el código en partes pequeñas(módulos) con lo necesario. 
+
+3. Pensando en tu TFI, ¿qué funcionalidades planeás implementar primero y por qué?
+¿Cómo podrías organizar tu trabajo para desarrollar el sistema de manera eficiente?
+	Primero la base de datos, luego iría por el menú y los módulos. 
+
+4. ¿Qué aprendiste sobre vos como programador/a durante este proyecto?
+	Me cuesta muchísimo no complicarme de mas con ciertas cosas que suelen ser básicas. Suele ocurrirme que me planteo una situación mas compleja de lo que en realidad es. 
