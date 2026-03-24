@@ -40,3 +40,45 @@ def eliminar_db():
         print("Archivo Eliminado")
     else:
         print("No hay archivo a Eliminar")
+
+
+"""
+CREATE TABLE productos (id INTEGER PRIMARY KEY AUTOINCREMENT,
+nombre TEXT NOT NULL,
+descripcion TEXT,
+cantidad INTEGER NOT NULL CHECK (cantidad >= 0),
+precio REAL NOT NULL CHECK (precio > 0.0),
+categoria TEXT)"
+"""
+
+
+def insertar_datos_db(db, nombre, descripcion, cantidad, precio, categoria):
+    conexion = sqlite3.connect(db)
+    cursor = conexion.cursor()
+    try:
+        consulta = "insert into productos(nombre, descripcion, cantidad, precio, categoria) values(?,?,?,?,?)"
+        datos = (nombre, descripcion, cantidad, precio, categoria)
+        cursor.execute(consulta, datos)
+        conexion.commit()
+        print(f"Registro ingresado {datos}")
+    except sqlite3.Error as e:
+        conexion.rollback()
+        print(f"Ocurrio un error: {e}")
+    finally:
+        conexion.close()
+
+
+def listar_datos_producto_db(db):
+    conexion = sqlite3.connect(db)
+    cursor = conexion.cursor()
+    try:
+        cursor.execute("BEGIN TRANSACTION")
+        consulta = "select nombre, descripcion, cantidad, precio, categoria from productos order by nombre"
+        cursor.execute(consulta)
+        resultado = cursor.fetchall()
+        return resultado
+    except sqlite3.Error as e:
+        conexion.rollback()
+        print(f"Ocurrio un error: {e}")
+    finally:
+        conexion.close()

@@ -1,4 +1,11 @@
-from db import eliminar_db, ruta_db, verificar_db_existe
+from db import (
+    eliminar_db,
+    ruta_db,
+    verificar_db_existe,
+    insertar_datos_db,
+    listar_datos_producto_db,
+)
+from funciones_extras import verificar_si_no, ingresar_datos, mostrar_datos_productos
 from colorama import init, Fore, Back
 
 init(autoreset=True)
@@ -17,7 +24,7 @@ def inicializaciones_base_dato():
                 verificar_db_existe(ruta_db)
             case "2":
                 print(f"{Back.RED}Eliminar Base De Datos   ")
-                eliminar_db()
+                verificar_si_no(eliminar_db, "Estas seguro de querer eliminar la db?")
             case "3":
                 print(f"{Back.RED}Salir   ")
                 break
@@ -64,8 +71,14 @@ def mostrar_menu():
         match opcion:
             case "1":
                 print(f"{Back.RED}Nuevo Producto   ")
+                nombre, descripcion, cantidad, precio, categoria = ingresar_datos()
+                insertar_datos_db(
+                    ruta_db, nombre, descripcion, cantidad, precio, categoria
+                )
             case "2":
                 print(f"{Back.RED}Listar Producto   ")
+                resultado = listar_datos_producto_db(ruta_db)
+                mostrar_datos_productos(resultado)
             case "3":
                 print(f"{Back.RED}Actualizar Producto(por Id)   ")
             case "4":
