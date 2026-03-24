@@ -8,6 +8,7 @@ from db import (
     validar_id_existente_db,
     actualizar_datos_por_id,
     eliminar_producto_por_id,
+    buscar_producto_por_id,
 )
 
 #   Funciones_extras son funciones a parte de las usadas por la db.
@@ -61,6 +62,22 @@ def mostrar_menu_secundario():
         match opcion:
             case "1":
                 print(f"{Back.RED}Buscar Producto(por Id)   ")
+                #   mostramos los productos
+                # resultado = listar_datos_producto_db(ruta_db)
+                # mostrar_datos_productos(resultado)
+                #   Validamos el id
+                id = validar_ingreso_id_valido()
+                #   que el id exista en la db
+                resultado = validar_id_existente_db(ruta_db, id)
+                if resultado == None:
+                    print("No hay datos para ese id.")
+                    continue
+                else:
+                    resultado_busqueda = buscar_producto_por_id(ruta_db, resultado)
+                    mostrar_datos_productos(resultado_busqueda)
+                    # mostrar_datos_productos()
+                    # Aca vendria la busqueda del producto por el id
+                    # y mostrarlo
             case "2":
                 print(f"{Back.RED}Buscar Producto(por nombre)   ")
             case "3":
