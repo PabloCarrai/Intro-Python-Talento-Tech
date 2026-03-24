@@ -57,7 +57,6 @@ def validar_ingreso_id_valido():
                 print("El id esta mal cargado...")
                 continue
             else:
-                print(f"Esto es un id, como la gente {id}")
                 return id
                 break
         except ValueError:
