@@ -207,3 +207,31 @@ def buscar_producto_por_id(db, id):
     finally:
         #   Cierro la conexion
         conexion.close()
+
+
+def buscar_producto_por(db, tipo_busqueda, elemento_a_buscar):
+    #   Me conecto a la db
+    conexion = sqlite3.connect(db)
+    #   Genero el cursor
+    cursor = conexion.cursor()
+    #   Uso un try por las dudas
+    try:
+        #   Arranco la transaccion
+        cursor.execute("BEGIN TRANSACTION;")
+        #   La consulta del select
+        consulta = f"select * from productos where {tipo_busqueda}=?"
+        #   Necesito una tupla para el dato a buscar
+        dato = (elemento_a_buscar,)
+        #   Ejecuto la consulta con los datos del id
+        cursor.execute(consulta, dato)
+        #   Solo necesito el primer registro
+        resultado = cursor.fetchall()
+        #   Devuelvo el mismo
+        return resultado
+    except sqlite3.Error as e:
+        #   Si algo sale mal hago un rollback
+        conexion.rollback()
+        print(f"Ocurrio un error: {e}")
+    finally:
+        #   Cierro la conexion
+        conexion.close()

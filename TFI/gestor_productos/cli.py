@@ -9,6 +9,7 @@ from db import (
     actualizar_datos_por_id,
     eliminar_producto_por_id,
     buscar_producto_por_id,
+    buscar_producto_por,
 )
 
 #   Funciones_extras son funciones a parte de las usadas por la db.
@@ -17,6 +18,7 @@ from funciones_extras import (
     ingresar_datos,
     mostrar_datos_productos,
     validar_ingreso_id_valido,
+    validar_dato_busqueda,
 )
 
 #   Importamos colorama para el menu
@@ -53,19 +55,18 @@ def mostrar_menu_secundario():
     #   Este es el menu de busquedas
     while True:
         print(f"{Back.GREEN}Menu Busqueda")
-        print(f"{Back.RED}1) {Back.BLUE}Buscar por Id)   ")
-        print(f"{Back.RED}2) {Back.BLUE}Buscar por Nombre)   ")
-        print(f"{Back.RED}3) {Back.BLUE}Buscar por Categoria)   ")
-        print(f"{Back.RED}4) {Back.BLUE}Buscar por Cantidad)   ")
-        print(f"{Back.RED}5) {Back.BLUE}Salir    ")
+        print(f"{Back.RED}1) {Back.BLUE}Buscar por Id   ")
+        print(f"{Back.RED}2) {Back.BLUE}Buscar por Nombre   ")
+        print(f"{Back.RED}3) {Back.BLUE}Buscar por Descripcion   ")
+        print(f"{Back.RED}4) {Back.BLUE}Buscar por Cantidad   ")
+        print(f"{Back.RED}5) {Back.BLUE}Buscar por Precio   ")
+        print(f"{Back.RED}6) {Back.BLUE}Buscar por Categoria   ")
+        print(f"{Back.RED}7) {Back.BLUE}Salir    ")
         opcion = input("Ingrese una opcion  ")
         match opcion:
             case "1":
                 print(f"{Back.RED}Buscar Producto(por Id)   ")
-                #   mostramos los productos
-                # resultado = listar_datos_producto_db(ruta_db)
-                # mostrar_datos_productos(resultado)
-                #   Validamos el id
+                #   Validamos el id bien ingresado
                 id = validar_ingreso_id_valido()
                 #   que el id exista en la db
                 resultado = validar_id_existente_db(ruta_db, id)
@@ -75,16 +76,73 @@ def mostrar_menu_secundario():
                 else:
                     resultado_busqueda = buscar_producto_por_id(ruta_db, resultado)
                     mostrar_datos_productos(resultado_busqueda)
-                    # mostrar_datos_productos()
-                    # Aca vendria la busqueda del producto por el id
-                    # y mostrarlo
             case "2":
                 print(f"{Back.RED}Buscar Producto(por nombre)   ")
+                #   Valido ingrese un valor a buscar
+                dato_a_buscar = validar_dato_busqueda()
+                #   Busco eso en la db
+                resultado = buscar_producto_por(ruta_db, "nombre", dato_a_buscar)
+                #   Si no tengo un resultado digo que no hay datos
+                if resultado == None:
+                    print("No hay datos ")
+                    continue
+                else:
+                    #   Si tengo un resultado lo muestro
+                    mostrar_datos_productos(resultado)
             case "3":
-                print(f"{Back.RED}Buscar Producto(por categoria)   ")
+                print(f"{Back.RED}Buscar Producto(por Descripcion)   ")
+                #   Valido el dato ingresado
+                dato_a_buscar = validar_dato_busqueda()
+                #   Veo que haya registros
+                resultado = buscar_producto_por(ruta_db, "descripcion", dato_a_buscar)
+                #   Sino hay datos aviso
+                if resultado == None:
+                    print("No hay datos ")
+                    continue
+                else:
+                    #   Los muestro
+                    mostrar_datos_productos(resultado)
             case "4":
                 print(f"{Back.RED}Buscar Producto(por cantidad)   ")
+                #   Valido el dato ingresado
+                dato_a_buscar = validar_dato_busqueda()
+                #   Veo si hay registros
+                resultado = buscar_producto_por(ruta_db, "cantidad", dato_a_buscar)
+                #   Si no hay aviso
+                if resultado == None:
+                    print("No hay datos ")
+                    continue
+                else:
+                    #   Los muestro
+                    mostrar_datos_productos(resultado)
             case "5":
+                print(f"{Back.RED}Buscar Producto(por precio)   ")
+                #   Valido el dato ingresado
+                dato_a_buscar = validar_dato_busqueda()
+                #   Veo si hay registros
+                resultado = buscar_producto_por(ruta_db, "precio", dato_a_buscar)
+                #   Si no hay aviso
+                if resultado == None:
+                    print("No hay datos ")
+                    continue
+                else:
+                    #   Los muestro
+                    mostrar_datos_productos(resultado)
+            case "6":
+                print(f"{Back.RED}Buscar Producto(por categoria)   ")
+                #   Valido el dato ingresado
+                dato_a_buscar = validar_dato_busqueda()
+                #   Veo si hay registros
+                resultado = buscar_producto_por(ruta_db, "categoria", dato_a_buscar)
+                #   Si no hay aviso
+                if resultado == None:
+                    print("No hay datos ")
+                    continue
+                else:
+                    #   Los muestro
+                    mostrar_datos_productos(resultado)
+
+            case "7":
                 print(f"{Back.RED}Salir  ")
                 break
             case _:
@@ -95,16 +153,20 @@ def mostrar_menu():
     #   Este es el menu principal
     while True:
         print(f"{Back.GREEN}Bienvenido")
-        print(f"{Back.RED}1) {Back.BLUE}Nuevo Producto   ")
-        print(f"{Back.RED}2) {Back.BLUE}Listar Producto   ")
-        print(f"{Back.RED}3) {Back.BLUE}Actualizar Producto(por Id)   ")
+        print(f"{Back.RED}1) {Back.BLUE}Inicializaciones Base Datos(Peligroso)   ")
+        print(f"{Back.RED}2) {Back.BLUE}Nuevo Producto   ")
+        print(f"{Back.RED}3) {Back.BLUE}Listar Producto   ")
         print(f"{Back.RED}4) {Back.BLUE}Buscar Producto    ")
-        print(f"{Back.RED}5) {Back.BLUE}Eliminar Producto(por Id)   ")
-        print(f"{Back.RED}6) {Back.BLUE}Inicializaciones Base Datos(Peligroso)   ")
+        print(f"{Back.RED}5) {Back.BLUE}Actualizar Producto(por Id)   ")
+        print(f"{Back.RED}6) {Back.BLUE}Eliminar Producto(por Id)   ")
         print(f"{Back.RED}7) {Back.BLUE}Salir    ")
         opcion = input("Ingrese una opcion  ")
         match opcion:
             case "1":
+                print(f"{Back.RED}Inicializaciones Base Datos(Peligroso)")
+                #   Accedemos a otro menu
+                inicializaciones_base_dato()
+            case "2":
                 print(f"{Back.RED}Nuevo Producto   ")
                 #   Aca validamos la correcta carga de los datos necesarios
                 nombre, descripcion, cantidad, precio, categoria = ingresar_datos()
@@ -112,13 +174,17 @@ def mostrar_menu():
                 insertar_datos_db(
                     ruta_db, nombre, descripcion, cantidad, precio, categoria
                 )
-            case "2":
+            case "3":
                 print(f"{Back.RED}Listar Producto   ")
                 #   guardamos la consulta en resultado
                 resultado = listar_datos_producto_db(ruta_db)
                 #   Y los mostramos
                 mostrar_datos_productos(resultado)
-            case "3":
+            case "4":
+                print(f"{Back.RED}Buscar Producto    ")
+                #   Accedemos a otro menu secundario
+                mostrar_menu_secundario()
+            case "5":
                 print(f"{Back.RED}Actualizar Producto(por Id)   ")
                 #   guardamos la consulta en resultado
                 resultado = listar_datos_producto_db(ruta_db)
@@ -140,11 +206,7 @@ def mostrar_menu():
                         ruta_db, nombre, descripcion, cantidad, precio, categoria, id
                     )
                     print("Registro actualizado")
-            case "4":
-                print(f"{Back.RED}Buscar Producto    ")
-                #   Accedemos a otro menu secundario
-                mostrar_menu_secundario()
-            case "5":
+            case "6":
                 print(f"{Back.RED}Eliminar Producto(por Id)   ")
                 #   mostramos los productos
                 resultado = listar_datos_producto_db(ruta_db)
@@ -159,10 +221,6 @@ def mostrar_menu():
                 else:
                     #   Eliminamos el producto por el id
                     eliminar_producto_por_id(ruta_db, id)
-            case "6":
-                print(f"{Back.RED}Inicializaciones Base Datos(Peligroso)")
-                #   Accedemos a otro menu
-                inicializaciones_base_dato()
             case "7":
                 #   Salimos
                 print(f"{Back.RED}Salir  ")

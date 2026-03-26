@@ -61,3 +61,18 @@ def validar_ingreso_id_valido():
                 break
         except ValueError:
             print("El id esta mal cargado...")
+
+
+def validar_dato_busqueda():
+    while True:
+        try:
+            dato_a_buscar = input("Buscamos?   ").strip()
+            if not dato_a_buscar:
+                print("Debe ingresar un valor ")
+                continue
+            else:
+                print("Aca devolvemos validado lo que ingreso")
+                return dato_a_buscar
+                break
+        except ValueError as e:
+            print(f"Ocurrio un error {e}")
