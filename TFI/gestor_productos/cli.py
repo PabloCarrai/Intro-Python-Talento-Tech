@@ -19,6 +19,7 @@ from funciones_extras import (
     mostrar_datos_productos,
     validar_ingreso_id_valido,
     validar_dato_busqueda,
+    validar_operador_busqueda_db,
 )
 
 #   Importamos colorama para el menu
@@ -106,8 +107,12 @@ def mostrar_menu_secundario():
                 print(f"{Back.RED}Buscar Producto(por cantidad)   ")
                 #   Valido el dato ingresado
                 dato_a_buscar = validar_dato_busqueda()
+                #   Al ser una cantidad ponemos un operador de comparacion
+                operador = validar_operador_busqueda_db()
                 #   Veo si hay registros
-                resultado = buscar_producto_por(ruta_db, "cantidad", dato_a_buscar)
+                resultado = buscar_producto_por(
+                    ruta_db, "cantidad", dato_a_buscar, operador
+                )
                 #   Si no hay aviso
                 if resultado == None:
                     print("No hay datos ")
@@ -119,8 +124,12 @@ def mostrar_menu_secundario():
                 print(f"{Back.RED}Buscar Producto(por precio)   ")
                 #   Valido el dato ingresado
                 dato_a_buscar = validar_dato_busqueda()
+                #   Al ser una cantidad ponemos un operador de comparacion
+                operador = validar_operador_busqueda_db()
                 #   Veo si hay registros
-                resultado = buscar_producto_por(ruta_db, "precio", dato_a_buscar)
+                resultado = buscar_producto_por(
+                    ruta_db, "precio", dato_a_buscar, operador
+                )
                 #   Si no hay aviso
                 if resultado == None:
                     print("No hay datos ")

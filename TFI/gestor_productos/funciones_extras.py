@@ -76,3 +76,15 @@ def validar_dato_busqueda():
                 break
         except ValueError as e:
             print(f"Ocurrio un error {e}")
+
+
+def validar_operador_busqueda_db():
+    while True:
+        try:
+            operador = input("Elija un operador Valido( = != > < >= <= ):    ")
+            if operador not in "= != > < >= <=":
+                print("Tiene que elegir un operador valido")
+            else:
+                return operador
+        except ValueError as e:
+            print(f"Error: {e}")

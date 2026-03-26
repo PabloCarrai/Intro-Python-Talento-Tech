@@ -209,7 +209,7 @@ def buscar_producto_por_id(db, id):
         conexion.close()
 
 
-def buscar_producto_por(db, tipo_busqueda, elemento_a_buscar):
+def buscar_producto_por(db, tipo_busqueda, elemento_a_buscar,operador="="):
     #   Me conecto a la db
     conexion = sqlite3.connect(db)
     #   Genero el cursor
@@ -219,7 +219,7 @@ def buscar_producto_por(db, tipo_busqueda, elemento_a_buscar):
         #   Arranco la transaccion
         cursor.execute("BEGIN TRANSACTION;")
         #   La consulta del select
-        consulta = f"select * from productos where {tipo_busqueda}=?"
+        consulta = f"select * from productos where {tipo_busqueda}{operador}?"
         #   Necesito una tupla para el dato a buscar
         dato = (elemento_a_buscar,)
         #   Ejecuto la consulta con los datos del id
