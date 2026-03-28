@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ## Ejecutando las pruebas ⚙️
 
-_La primer vez que ejecutes el programa puede ocurrir que te traigas todos los archivos necesarios, o en su defecto te falte el archivo que contiene la base de datos en sqlite3. Si viene con el archivo, es muy probable que contenga registros que no te interece conservar. Corriendo el programa en el primer menu tenes una opcion referente al manejo de la base de datos. Este es la opcion 1. En esta opcion podras inicializar desde cero este archivo. Primero seria elegir la opcion de eliminar el archivo, para poder arrancar desde cero. Luego inicializar, con esto te garantizas iniciar con una base de datos vacia pero funcional. _
+_La primer vez que ejecutes el programa puede ocurrir que te traigas todos los archivos necesarios, o en su defecto te falte el archivo que contiene la base de datos en sqlite3. Si viene con el archivo, es muy probable que contenga registros que no te interece conservar. Corriendo el programa en el primer menu tenes una opcion referente al manejo de la base de datos. Este es la opcion 1. En esta opcion podras inicializar desde cero este archivo. Primero seria elegir la opcion de eliminar el archivo, para poder arrancar desde cero. Luego inicializar, con esto te garantizas iniciar con una base de datos vacia pero funcional._
 
 ### Analice las pruebas end-to-end 🔩
 
