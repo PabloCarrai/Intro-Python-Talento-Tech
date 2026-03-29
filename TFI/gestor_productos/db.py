@@ -65,7 +65,7 @@ def insertar_datos_db(db, nombre, descripcion, cantidad, precio, categoria):
         cursor.execute(consulta, datos)
         #   Hago efectivo el cambio
         conexion.commit()
-        print(f"Registro ingresado {datos}")
+        print("Registro ingresado")
     except sqlite3.Error as e:
         #   En caso de un error hago un rollback
         conexion.rollback()

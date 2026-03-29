@@ -224,6 +224,9 @@ def mostrar_menu():
                 id = validar_ingreso_id_valido()
                 #   que el id exista en la db
                 resultado = validar_id_existente_db(ruta_db, id)
+
+                #   Aca iria el esta seguro que desea eliminar
+
                 if resultado == None:
                     print("No hay datos para ese id.")
                     continue

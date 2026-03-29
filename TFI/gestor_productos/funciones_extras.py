@@ -67,11 +67,12 @@ def validar_dato_busqueda():
     while True:
         try:
             dato_a_buscar = input("Buscamos?   ").strip()
+            #   Verificamos que no sea un dato vacio
             if not dato_a_buscar:
                 print("Debe ingresar un valor ")
                 continue
             else:
-                print("Aca devolvemos validado lo que ingreso")
+                #   Retornamos ese dato a buscar
                 return dato_a_buscar
                 break
         except ValueError as e:
@@ -81,10 +82,13 @@ def validar_dato_busqueda():
 def validar_operador_busqueda_db():
     while True:
         try:
+            #   Para precio y cantidad el operador del sql puede ser diferentes valores
             operador = input("Elija un operador Valido( = != > < >= <= ):    ")
+            #   Chequeamos que sea un valor valido de los pasados
             if operador not in "= != > < >= <=":
                 print("Tiene que elegir un operador valido")
             else:
+                #   Retornamos el operador
                 return operador
         except ValueError as e:
             print(f"Error: {e}")
