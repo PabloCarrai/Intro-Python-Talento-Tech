@@ -49,13 +49,29 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 * [Sqlite](https://sqlite.org/docs.html) - Gestor de bases de datos locales
 
 
-## Checklist de objetivos 🛠️
+## Checklist de objetivos 
 ### Funcionalidades
 - [X] Registrar nuevos Productos.
 - [ ] Visualizar datos de los Productos Registrados
 - [ ] Actualizar datos del Producto, mediante Id.
-- [ ] 
-- [ ]
-- [ ]
-- [ ]
-- [ ]
+- [ ] Eliminacion de Productos, mediante su Id
+- [ ] Busqueda de Productos, mediante su Id. De manera opcional, se puede implementar la busqueda por los campos nombre o categoria.
+- [ ] Reporte de Productos que tengan una cantidad igual o inferior a un limite especificado por el Usuario/a
+
+### Base de Datos
+_Crear una base de datos llamada 'inventario.db' para almacenar los datos de los productos.La tabla 'productos debe contener las siguientes columnas'_
+
+```
+id: Identificador unico del producto(clave primaria,autoincremental)
+nombre: Nombre del producto(texto, no nulo)
+descripcion: Breve descripcion del producto(texto)
+cantidad: Cantidad disponible del producto(entero, no nulo)
+precio: Precio del producto(real, no nulo)
+categoria: Categoria a la que pertenece el producto(texto)
+```
+
+### Interfaz de Usuario
+_Implementar una interfaz de usuario basica, para interactuar con la base de datos a traves de la terminal. La intergaz debe incluir un menu principal con las opciones necesarias para acceder a cada funcion descrita anteriormente._
+
+### Opcional
+_Utilizar el modulo colorama para mejorar la legibilidad y experiencia de usuario en la termina, añadiendo colores a los mensajes y opciones. El codigo debe estar bien estructurado, utilizando funciones para modularizar la logica de la aplicacion. Los comentarios deben estar presentes en el codigo, explicando las partes claves del mismo_
