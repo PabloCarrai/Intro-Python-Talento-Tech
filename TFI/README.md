@@ -56,7 +56,7 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 - ✅ Actualizar datos del Producto, mediante Id.
 - ✅ Eliminacion de Productos, mediante su Id
 - ✅ Busqueda de Productos, mediante su Id. De manera opcional, se puede implementar la busqueda por los campos nombre o categoria.
-- [✅] Reporte de Productos que tengan una cantidad igual o inferior a un limite especificado por el Usuario/a
+- ✅ Reporte de Productos que tengan una cantidad igual o inferior a un limite especificado por el Usuario/a
 
 ### Base de Datos
 _Crear una base de datos llamada 'inventario.db' para almacenar los datos de los productos.La tabla 'productos debe contener las siguientes columnas'_
