@@ -75,3 +75,11 @@ _Implementar una interfaz de usuario basica, para interactuar con la base de dat
 
 ### Opcional
 _Utilizar el modulo colorama para mejorar la legibilidad y experiencia de usuario en la termina, añadiendo colores a los mensajes y opciones. El codigo debe estar bien estructurado, utilizando funciones para modularizar la logica de la aplicacion. Los comentarios deben estar presentes en el codigo, explicando las partes claves del mismo_
+
+### Flujo de la aplicacion. 
+_La aplicacion corre particularmente desde el archivo main.py. El mismo tiene el punto de arranque de la aplicacion. Desde aca llamamos a un modulo que tiene el menu propiamente de la aplicacion este modulo se encuentra en el archivo cli.py. Dicho modulo muestra las diferentes opciones, y dependiendo de los datos ingresados se vale del archivo funciones_extras.py que contiene funciones con funcionalidades particulades como validaciones entre otras funciones. Luego para el caso de tener que hacer algo con respecto a la base de datos el modulo se comunica con las funciones creadas en el archivo db.py. Que contiene muchas funciones para realizar esas tareas_
+
+### Desarrollador 🙋🏻‍♂️
+Pablo Carrai
+- Correo: [pablohernanjuan@hotmail.com](mailto:pablohernanjuan@hotmail.com)
+- Repositorio: [Repositorio:](https://github.com/PabloCarrai)
