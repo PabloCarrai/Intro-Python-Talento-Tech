@@ -82,4 +82,4 @@ _La aplicacion corre particularmente desde el archivo main.py. El mismo tiene el
 ### Desarrollador 🙋🏻‍♂️
 Pablo Carrai
 - Correo: [pablohernanjuan@hotmail.com](mailto:pablohernanjuan@hotmail.com)
-- Repositorio: [Repositorio:](https://github.com/PabloCarrai)
+- [Repositorio:](https://github.com/PabloCarrai)
