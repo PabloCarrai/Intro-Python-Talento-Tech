@@ -47,3 +47,15 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 
 * [Python](https://docs.python.org/3/) - Lenguaje con el que programamos
 * [Sqlite](https://sqlite.org/docs.html) - Gestor de bases de datos locales
+
+
+## Checklist de objetivos 🛠️
+### Funcionalidades
+- [ ] Registrar nuevos Productos.
+- [ ] Visualizar datos de los Productos Registrados
+- [ ] Actualizar datos del Producto, mediante Id.
+- [ ] 
+- [ ]
+- [ ]
+- [ ]
+- [ ]
