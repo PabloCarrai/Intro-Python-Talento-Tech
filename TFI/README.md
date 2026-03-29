@@ -51,7 +51,7 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 
 ## Checklist de objetivos 🛠️
 ### Funcionalidades
-- [ ] Registrar nuevos Productos.
+- [X] Registrar nuevos Productos.
 - [ ] Visualizar datos de los Productos Registrados
 - [ ] Actualizar datos del Producto, mediante Id.
 - [ ] 
