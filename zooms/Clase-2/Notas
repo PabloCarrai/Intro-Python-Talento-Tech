@@ -1,0 +1,34 @@
+#   30/3/26
+#   2 Zooms
+#   252
+
+
+#   Variables
+s1=8.5
+b1="Juan"
+b3=True
+
+"""
+int: numeros enteros
+float: numeros reales
+str(string) cadena de texto
+bool(booleano) true/false
+"""
+
+nombre=input("Nombre?")
+print(f"Bienvenido {nombre}")
+
+input permite pedir un dato. 
+nombre=input("Nombre?") #  Almacena un valor en nombre, que el usuario escribe.
+
+# operadores
++ suma
+- resta
+* multiplicacion
+/ division
+
+
+#   Condicionales
+#   Estructura de control, 
+#   if 
+
