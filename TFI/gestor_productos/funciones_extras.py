@@ -12,6 +12,24 @@ def verificar_si_no(funcion, pregunta):
             print("Respondistes cualquiera. Ubicate...")
 
 
+def verificar_si_no_argumentos(funcion, pregunta, db, id):
+    """
+    Esta funcion te permite enviar una pregunta, y ejecutar
+    una funcion que toma dos parametros, db y id
+    """
+    #   Esta funcion usa una pregunta, y espera una confirmacion a esa pregunta
+    respuesta = input(pregunta).lower().strip()
+    #   De acuerdo a la pregunta lanzamos una funcion
+    match respuesta:
+        case "si" | "s":
+            print("Genial, avanzamos nomas...")
+            funcion(db, id)
+        case "no" | "n":
+            print("Ok no hacemos nada... ")
+        case _:
+            print("Respondistes cualquiera. Ubicate...")
+
+
 def ingresar_datos():
     #   Aca pedimos los datos y lo validamos
     while True:

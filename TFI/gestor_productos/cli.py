@@ -20,6 +20,7 @@ from funciones_extras import (
     validar_ingreso_id_valido,
     validar_dato_busqueda,
     validar_operador_busqueda_db,
+    verificar_si_no_argumentos,
 )
 
 #   Importamos colorama para el menu
@@ -29,6 +30,9 @@ init(autoreset=True)
 
 
 def inicializaciones_base_dato():
+    """
+    Este es el menu que gestiona la db.
+    """
     #   Esta funcion es un menu para la gestion de la db
     while True:
         print(f"{Back.GREEN}Menu Base de Datos")
@@ -44,7 +48,7 @@ def inicializaciones_base_dato():
             case "2":
                 #   En algunos casos es necesario eliminar la db
                 print(f"{Back.RED}Eliminar Base De Datos   ")
-                verificar_si_no(eliminar_db, "Estas seguro de querer eliminar la db?")
+                verificar_si_no(eliminar_db, "Estas seguro de querer eliminar la db?  ")
             case "3":
                 print(f"{Back.RED}Salir   ")
                 break
@@ -53,6 +57,9 @@ def inicializaciones_base_dato():
 
 
 def mostrar_menu_secundario():
+    """
+    Este es el menu de las busquedas
+    """
     #   Este es el menu de busquedas
     while True:
         print(f"{Back.GREEN}Menu Busqueda")
@@ -159,6 +166,9 @@ def mostrar_menu_secundario():
 
 
 def mostrar_menu():
+    """
+    Este es el menu Principal
+    """
     #   Este es el menu principal
     while True:
         print(f"{Back.GREEN}Bienvenido")
@@ -226,13 +236,17 @@ def mostrar_menu():
                 resultado = validar_id_existente_db(ruta_db, id)
 
                 #   Aca iria el esta seguro que desea eliminar
-
                 if resultado == None:
                     print("No hay datos para ese id.")
                     continue
                 else:
                     #   Eliminamos el producto por el id
-                    eliminar_producto_por_id(ruta_db, id)
+                    verificar_si_no_argumentos(
+                        eliminar_producto_por_id,
+                        "Esta seguro de eliminar este registro?   ",
+                        ruta_db,
+                        id,
+                    )
             case "7":
                 #   Salimos
                 print(f"{Back.RED}Salir  ")

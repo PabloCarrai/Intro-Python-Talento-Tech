@@ -23,6 +23,9 @@ def verificar_db_existe(dbfile):
 
 
 def crear_db():
+    """
+    Esta funcion genera las tablas necesarias de la db
+    """
     #   accedemos a la db, si no esta la crea.
     conexion = sqlite3.connect(ruta_db)
     #   Creamos un cursor de la conexion
@@ -51,6 +54,9 @@ def eliminar_db():
 
 
 def insertar_datos_db(db, nombre, descripcion, cantidad, precio, categoria):
+    """
+    Aca me encargo de ingresar los datos en la tabla productos
+    """
     #   Creo la conexion a la db
     conexion = sqlite3.connect(db)
     #   Creo el cursor
@@ -76,6 +82,12 @@ def insertar_datos_db(db, nombre, descripcion, cantidad, precio, categoria):
 
 
 def listar_datos_producto_db(db):
+    """
+    Esta funcion busca los datos en la tabla productos.
+    ordena los mismos en base al nombre del producto.
+    Retorna los datos de la tabla productos en el caso de que exista
+    Esto es id,nombre, descripcion, cantidad, precio ordenado por el nombre
+    """
     #   Inicio la conexion a la db
     conexion = sqlite3.connect(db)
     #   Genero un cursor
@@ -102,6 +114,10 @@ def listar_datos_producto_db(db):
 
 
 def validar_id_existente_db(db, id):
+    """
+    Esta funcion se encarga de ver si un id existe en la db
+    Paso la db y el id a buscar y devuelvo el registro en caso de existir
+    """
     #   Abro la conexion a la db
     conexion = sqlite3.connect(db)
     #   genero un cursor
@@ -132,7 +148,11 @@ def validar_id_existente_db(db, id):
 
 
 def actualizar_datos_por_id(db, nombre, descripcion, cantidad, precio, categoria, id):
-    #   Inicio la conexio
+    """
+    Esta funcion hace un update de cada item en la tabla productos buscando
+    el mismo en base a su id.
+    """
+    #   Inicio la conexion
     conexion = sqlite3.connect(db)
     #   Genero un cursor
     cursor = conexion.cursor()
@@ -157,6 +177,10 @@ def actualizar_datos_por_id(db, nombre, descripcion, cantidad, precio, categoria
 
 
 def eliminar_producto_por_id(db, id):
+    """
+    Elimino un producto en base a su id.
+    Necesito la db y el id del mismo
+    """
     #   Me conecto a la db
     conexion = sqlite3.connect(db)
     #   Genero el cursor
@@ -184,6 +208,10 @@ def eliminar_producto_por_id(db, id):
 
 
 def buscar_producto_por_id(db, id):
+    """
+    Busco un producto por su id.
+    Devuelvo toda la info de ese producto en base a su id
+    """
     #   Me conecto a la db
     conexion = sqlite3.connect(db)
     #   Genero el cursor
@@ -209,7 +237,15 @@ def buscar_producto_por_id(db, id):
         conexion.close()
 
 
-def buscar_producto_por(db, tipo_busqueda, elemento_a_buscar,operador="="):
+def buscar_producto_por(db, tipo_busqueda, elemento_a_buscar, operador="="):
+    """
+    Esta funcion permite buscar un producto en base a varias opciones.
+    Busca por tipo_busqueda(diferentes campos de la tabla producto),
+    el elemento_a_buscar(item a buscar) y por su operador(puede ser =, <,<=,>,>= y !=)
+    En el caso de precio y cantidad se pueden usar esos operadores, para los otros
+    item es =.
+    Devuelve el resultado de la busqueda.
+    """
     #   Me conecto a la db
     conexion = sqlite3.connect(db)
     #   Genero el cursor
