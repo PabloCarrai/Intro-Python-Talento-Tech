@@ -1,0 +1,17 @@
+#   6/4/26
+#   3 Zooms
+#   237
+
+Condicionales
+    Depende de condiciones. 
+
+if (condicion):
+    codigo que se ejecuta
+elif (condicion):
+    codigo que se ejecuta
+elif (condicion):
+    codigo que se ejecuta
+elif (condicion):
+    codigo que se ejecuta
+else:                    (sino)
+    codigo que se ejecuta
