@@ -1,0 +1,25 @@
+#   13/4/26
+#   4 Zooms
+#   226
+
+#   metodo de caracteres
+"hola".capitalize()  #    Hace en mayuscula la primer letra de la cadena
+"hola".title()  #    Le da forma de titulo
+" hola ".strip()
+"hola".upper()  #    Todo a mayuscula
+"HOLA".lower()  #    Todo a minuscula
+"hola".replace("hola", "Hola")
+
+#   Indices
+mensaje = "Hola"
+print(mensaje[0])  # H
+print(mensaje[1])  # o
+print(mensaje[2])  # l
+print(mensaje[3])  # a
+
+
+#   bucles
+vueltas = 0
+while vueltas < 20:
+    vueltas += 1
+    print(vueltas)
