@@ -1,0 +1,19 @@
+#   20/4/26
+#   5 Zooms
+#   208
+
+Se puede visualizar la preentrega. 
+Uso de while
+
+cont=0
+n=100
+while(cont<10 or n>100):
+    cont+=1
+    n-=20
+    print("vuelva ",cont)
+print("Cantidad de vueltas ", cont)
+
+Listas.
+numeros=[10,20,30,40,50]
+nombres=["Romina","Ana","Cecilia","Carlos","Juan"]
+lista_vacia=[]
