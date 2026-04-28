@@ -1,0 +1,17 @@
+#   27/4/26
+#   6 Zooms
+#   197
+
+
+for i in range(0,10,1):
+    print(i)
+
+for i in range(len(lista)):
+    print(f"Fruta {i+1}: {lista[i]})
+
+for elemento in lista:
+    print(elemento)
+
+for i,elemento in enumerate(lista):   
+    print(i,elemento)
+
