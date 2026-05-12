@@ -1,0 +1,30 @@
+#   11/5/26
+#   8 Zooms
+#   141
+
+el 22 del 6 terminaria
+Luego de las vacaciones de invierno son las inscripciones
+
+
+funciones
+
+#   Definicion de la funcion
+def saludo():
+    print("Hola Mundo")
+
+#   Llamado de la misma
+saludo()
+
+#   Definicion de la funcion
+def mostrar_mensaje():
+    mensaje="Este es un mensaje predefinido"
+    print(mensaje)
+
+#   Llamado de la misma
+mostrar_mensaje()
+
+
+def saludar(nombre):
+    print(f"Hola {nombre}")
+
+saludar("Pablo")
