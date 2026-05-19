@@ -1,0 +1,20 @@
+#   18/5/26
+#   9 Zooms
+#   149
+
+#   Funciones con retorno
+
+
+def calcular_cuadrado(numero):
+    resultado = numero**2
+    return resultado
+
+
+numero = int(input("Numero?  "))
+cuadrado = calcular_cuadrado(numero)
+print(f"El cuadrado de {numero} es {cuadrado}")
+
+def sumar(a,b):
+    return a+b
+
+print(sumar(1,2))

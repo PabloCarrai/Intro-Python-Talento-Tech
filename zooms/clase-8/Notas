@@ -1,6 +1,6 @@
 #   11/5/26
 #   8 Zooms
-#   141
+#   160
 
 el 22 del 6 terminaria
 Luego de las vacaciones de invierno son las inscripciones
@@ -28,3 +28,9 @@ def saludar(nombre):
     print(f"Hola {nombre}")
 
 saludar("Pablo")
+
+def sumar(numero1,numero2):
+    resultado = numero1 + numero2
+    print(f"Resultado de suma {resultado}")
+
+sumar(10,4)
