@@ -1,0 +1,27 @@
+#   1/6/26
+#   10 Zooms(29/6 es la ultima clase)
+#   145
+#   mitad julio arranca inscripciones
+
+
+#   Manejo de archivos
+try:
+    archivo = open("datos.txt", "r")
+except FileNotFoundError:
+    archivo = open("datos.txt", "w")
+    archivo.write("Hola como estan?")
+    archivo.close()
+
+
+#   Manejo de archivos
+archivo = open("datos.txt", "w")
+archivo.write("Hola ahi va")
+archivo.write("vamos")
+archivo.close()
+
+
+#   Leer el archivo
+archivo = open("datos.txt", "w")
+contenido = archivo.read()
+print(contenido)
+archivo.close()
