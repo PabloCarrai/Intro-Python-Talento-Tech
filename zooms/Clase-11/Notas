@@ -1,0 +1,12 @@
+#   8/6/26
+#   11 Zooms
+#   135
+
+#   Sqlite Bases de Datos
+#   sqliteviewer.app        Ver bases de datos online
+#   sqlitebrowser.org
+
+import sqlite3  #   importo sqlite
+conexion=sqlite3.connect("producto.db")
+print("Conexion establecida exitosamente")
+conexion.close()
